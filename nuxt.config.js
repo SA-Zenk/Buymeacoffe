@@ -7,14 +7,17 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'buymeacoffe',
+    title: 'Buy Me a Coffee',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' } , 
+    {
+      rel: 'stylesheet', href: '//db.onlinewebfonts.com/c/27c8b64c285e64ed247c83fd3465e8c5?family=Circular+Bold'
+    }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

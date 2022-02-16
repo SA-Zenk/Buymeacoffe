@@ -1,5 +1,5 @@
 <template lang="pug">
-	.app
+	header
 		.header-background
 			.header
 				a(href="#")
@@ -13,7 +13,7 @@
 </template>
 
 <style lang="scss" scoped>
-.app {
+div {
   padding-top: 24px;
 }
 
@@ -37,7 +37,7 @@
   &__explore {
     text-decoration: none;
     font-size: 12px;
-    padding: 2px 8px;
+    padding: 8px;
     color: rgba(34, 34, 34, 1);
 		transform: scale(1.035) perspective(1px);
   }
@@ -66,7 +66,6 @@
     transition: 0.2s ease;
 		transform: scale(2);
     background: rgba(0, 0, 0, 0.05);
-		padding: 9px;
   }
 
   &__accses--botton {
