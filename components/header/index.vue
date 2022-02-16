@@ -32,6 +32,7 @@ header {
   }
 
   &__aboutus {
+    display: flex;
   }
 
   &__explore {
@@ -41,16 +42,53 @@ header {
     color: rgba(34, 34, 34, 1);
     transform: scale(1.035) perspective(1px);
     font-family: 'Circular Bold';
-  }
-  &__explore:hover {
-    height: 100%;
-    width: 100%;
-    border-radius: 40px;
-    transition: all 0.2s ease;
-    background: rgba(0, 0, 0, 0.05);
+    position: relative;
+    display: block;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 40px;
+      opacity: 0;
+      transition: all 0.7s ease;
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+        &:hover::before {
+      height: 100%;
+      width: 100%;
+      border-radius: 40px;
+      transform:scale(1.035);
+      opacity: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transform: scale(0);
+      border-radius: 40px;
+      opacity: 0;
+      transition: .5s;
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    &:hover::after {
+      transform: scale(1);
+    }
+
+
   }
 
   &__register {
+    display: inherit;
   }
 
   &__acces {
@@ -59,19 +97,24 @@ header {
     text-decoration: none;
     padding: 8px;
     font-family: 'Circular Bold';
-    transition: 0.3s ease-in-out;
-  }
+    transition: all 0.2s ease;
 
-  &__acces:hover {
-    border-radius: 40px;
-    transform: scale(1.1);
-    background: rgba(0, 0, 0, 0.05);
+    &:hover {
+      border-radius: 40px;
+      transform: scaleX(1.021) scaleY(1.041) perspective(1px);
+      background: rgba(0, 0, 0, 0.05);
+    }
   }
 
   &__acces--botton {
     border-radius: 40px;
     background-color: rgba(255, 221, 0, 1);
     padding: 8px 16px;
+    display: block;
+
+    &:hover {
+      transform: scaleX(1.021) scaleY(1.041) perspective(1px);
+    }
   }
 }
 </style>
