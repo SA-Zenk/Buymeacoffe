@@ -1,7 +1,6 @@
 <template lang="pug">
 div
   NuxtLink.link(to="/about") about
-  HomeHero
 </template>
 
 <script>
