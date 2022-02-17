@@ -15,6 +15,7 @@
 <style lang="scss" scoped>
 header {
   padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-background {

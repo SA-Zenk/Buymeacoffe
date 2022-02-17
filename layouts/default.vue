@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   Header
-  supporter
+  Hero
   Nuxt
   h1 FOOTER
 </template>
