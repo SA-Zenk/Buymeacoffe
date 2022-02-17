@@ -9,7 +9,7 @@
 				a.header__explore(href="#") Explore
 			.header__register
 				a.header__acces(href="#") Log in
-				a.header__acces.header__acces--botton(href="#") Sign up
+				a.header__sign(href="#") Sign up
 </template>
 
 <style lang="scss" scoped>
@@ -40,7 +40,6 @@ header {
     font-size: 11px;
     padding: 8px;
     color: rgba(34, 34, 34, 1);
-    transform: scale(1.035) perspective(1px);
     font-family: 'Circular Bold';
     position: relative;
     display: block;
@@ -55,40 +54,21 @@ header {
       border-radius: 40px;
       opacity: 0;
       transition: all 0.7s ease;
+      transform: scale(0);
       background: rgba(0, 0, 0, 0.05);
     }
 
-        &:hover::before {
+    &:hover::before {
       height: 100%;
       width: 100%;
       border-radius: 40px;
-      transform:scale(1.035);
+      transform: scale(1);
       opacity: 1;
     }
-
-    &::after {
-      content: '';
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      transform: scale(0);
-      border-radius: 40px;
-      opacity: 0;
-      transition: .5s;
-      background: rgba(0, 0, 0, 0.05);
-    }
-
-    &:hover::after {
-      transform: scale(1);
-    }
-
-
   }
 
   &__register {
-    display: inherit;
+    display: flex;
   }
 
   &__acces {
@@ -98,19 +78,40 @@ header {
     padding: 8px;
     font-family: 'Circular Bold';
     transition: all 0.2s ease;
+    position: relative;
 
-    &:hover {
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
       border-radius: 40px;
-      transform: scaleX(1.021) scaleY(1.041) perspective(1px);
+      opacity: 0;
+      transition: all 0.7s ease;
+      transform: scale(0);
       background: rgba(0, 0, 0, 0.05);
+    }
+
+    &:hover::before {
+      height: 100%;
+      width: 100%;
+      border-radius: 40px;
+      transform: scale(1);
+      opacity: 1;
     }
   }
 
-  &__acces--botton {
+  &__sign {
     border-radius: 40px;
     background-color: rgba(255, 221, 0, 1);
     padding: 8px 16px;
     display: block;
+    font-family: 'Circular Bold';
+    text-decoration: none;
+    color: rgba(34, 34, 34, 1);
+    transition: all 0.7s ease;
 
     &:hover {
       transform: scaleX(1.021) scaleY(1.041) perspective(1px);
