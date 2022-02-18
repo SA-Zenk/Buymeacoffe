@@ -9,20 +9,6 @@
 		.hero__start
 			a.hero__button(href="#") Start my page
 		p.hero__sentence its free, and take less than a minute.
-		.hero__slider
-			.hero__slider-container
-				a.hero__team(href="#") Video creators
-				a.hero__team(href="#") Artists
-				a.hero__team(href="#") Writers
-				a.hero__team(href="#") Musicians
-				a.hero__team(href="#") Developers
-				a.hero__team(href="#") Gaming
-				a.hero__team(href="#") Podcasters
-				a.hero__team(href="#") Community
-		.hero__cards
-			.hero__cards-container
-				a.hero__card
-
 </template>
 
 <style lang="scss" scoped>
@@ -108,59 +94,6 @@
     padding-top: 24px;
     font-size: 16px;
     padding-bottom: 48px;
-  }
-
-  &__slider {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 81%;
-    height: 44px;
-    overflow: hidden;
-  }
-
-  &__slider-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 5px;
-    pointer-events: none;
-  }
-
-  &__team {
-    height: 50px;
-    width: 111px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Circular Bold';
-    position: relative;
-    text-decoration: none;
-    color: rgba(34, 34, 34, 1);
-
-    &::before {
-      content: '';
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      border-radius: 40px;
-      opacity: 0;
-      transition: all 0.7s ease;
-      transform: scale(0);
-      background: rgba(0, 0, 0, 0.05);
-    }
-
-    &:hover::before {
-      height: 100%;
-      width: 100%;
-      border-radius: 40px;
-      transform: scale(1);
-      opacity: 1;
-    }
   }
 }
 </style>
