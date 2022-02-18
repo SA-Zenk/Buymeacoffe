@@ -9,6 +9,16 @@
 		.hero__start
 			a.hero__button(href="#") Start my page
 		p.hero__sentence its free, and take less than a minute.
+		.hero__slider
+			.hero__slider-container
+				.hero__team Video creators
+				.hero__team Artists
+				.hero__team Writers
+				.hero__team Musicians
+				.hero__team Developers
+				.hero__team Gaming
+				.hero__team Podcasters
+				.hero__team Community
 
 </template>
 
@@ -67,33 +77,54 @@
   &__start {
     display: flex;
     justify-content: center;
-		margin: 16px 0px 0px;
+    margin: 16px 0px 0px;
   }
 
-	&__button {
-		border-radius: 40px;
-		border: none;
-		background-color: #ffdd00;
-		height: 48px;
+  &__button {
+    border-radius: 40px;
+    border: none;
+    background-color: #ffdd00;
+    height: 48px;
     width: 272px;
-		font-size: 16px;
-		font-family: 'Circular Bold';
-		transition: all 0.7s ease;
-		display: flex;
+    font-size: 16px;
+    font-family: 'Circular Bold';
+    transition: all 0.7s ease;
+    display: flex;
     align-items: center;
     justify-content: center;
-		text-decoration: none;
-		color: #222222;
+    text-decoration: none;
+    color: #222222;
 
-		&:hover {
-			transform: scaleX(1.021) scaleY(1.041) perspective(1px);
-		}
+    &:hover {
+      transform: scaleX(1.021) scaleY(1.041) perspective(1px);
+    }
+  }
+
+  &__sentence {
+    font-family: 'Circular Bold';
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+	&__slider {
+		position: relative;
+		left: 0;
+		top: 0;
+		width: 80%;
+		height: 200px;
+		overflow: hidden;
 	}
 
-	&__sentence {
-		font-family: 'Circular Bold';
-		margin-top: 16px;
-		font-size: 16px;
+	&__slider-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 200%;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		gap: 5px;
+		pointer-events: none;
 	}
 }
 </style>
