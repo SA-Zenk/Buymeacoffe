@@ -22,6 +22,11 @@
 
 </template>
 
+<script>
+  let slider = document.querySelector(`.slider`);
+  let slidercontain = document.querySelector(`.slider-container`);
+</script>
+
 <style lang="scss" scoped>
 .hero {
   padding-left: 24px;
