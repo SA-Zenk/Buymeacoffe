@@ -19,13 +19,11 @@
 				a.hero__team(href="#") Gaming
 				a.hero__team(href="#") Podcasters
 				a.hero__team(href="#") Community
+		.hero__cards
+			.hero__cards-container
+				a.hero__card
 
 </template>
-
-<script>
-  let slider = document.querySelector(`.slider`);
-  let slidercontain = document.querySelector(`.slider-container`);
-</script>
 
 <style lang="scss" scoped>
 .hero {
