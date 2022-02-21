@@ -1,8 +1,6 @@
 <template lang="pug">
 div
-  Header
-  Hero
-  Slider
+  HomeHeader
   Nuxt
   h1 FOOTER
 </template>
